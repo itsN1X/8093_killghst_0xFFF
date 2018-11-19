@@ -22,4 +22,12 @@ into the {body} of the default.hbs template --}}
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner"><i>Welcome to the <strong>BYME</strong>.Network</i></div>
+            <div class="page-feed">
+            {{#foreach pages}}
+
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "page-card"}}
+
+            {{/foreach}}
+        </div>
 </main>
